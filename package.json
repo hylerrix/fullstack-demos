@@ -1,0 +1,24 @@
+{
+  "name": "wechatgo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "qrcode-terminal": "^0.11.0",
+    "wechaty": "^0.7.78"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icorvoh/Wechat-GO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icorvoh/Wechat-GO/issues"
+  },
+  "homepage": "https://github.com/icorvoh/Wechat-GO#readme"
+}
