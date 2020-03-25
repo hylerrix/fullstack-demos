@@ -1,0 +1,15 @@
+Console {
+  log: [Function: bound log],
+  info: [Function: bound log],
+  warn: [Function: bound warn],
+  error: [Function: bound warn],
+  dir: [Function: bound dir],
+  time: [Function: bound time],
+  timeEnd: [Function: bound timeEnd],
+  trace: [Function: bound trace],
+  assert: [Function: bound assert],
+  Console: [Function: Console] }
+Hello
+Hello icorvoh
+Hello: icorvoh
+Hello: { name: 'icorvoh' }
