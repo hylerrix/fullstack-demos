@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Instance</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ foo }}</p>
+        <!-- 这里的 `foo` 不会更新！ -->
+        <button v-on:click="foo='baz'">Change it</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // 一个 Vue 应用由一个通过 new Vue 创建的根 Vue 实例，以及可选的嵌套的、可复用的组件树组成。
+        // 所有的 Vue 组件都是 Vue 实例，并且接受相同的选项对象 (一些根实例特有的选项除外)。
+        var data = { a: 1 }
+
+        // 该对象被加入到一个 Vue 实例中
+        // 只有当实例被创建时 data 中存在的属性才是响应式的
+        var vm = new Vue({
+            data: data
+        })
+
+        // 获得这个实例上的属性
+        // 返回源数据中对应的字段
+        vm.a == data.a // => true
+
+        // 设置属性也会影响到原始数据
+        vm.a = 2
+        data.a // => 2
+
+        // ……反之亦然
+        data.a = 3
+        vm.a // => 3
+    </script>
+    <script>
+        var obj = {
+            foo: 'bar'
+        }
+
+        Object.freeze(obj)
+
+        new Vue({
+            el: '#app',
+            data: obj
+        })
+    </script>
+    <script>
+        new Vue({
+            data: {
+                a: 1
+            },
+            // created 钩子可以用来在一个实例被创建之后执行代码
+            // 其他钩子：mounted、updated 和 destroyed 等
+            created: function () {
+                // `this` 指向 vm 实例
+                console.log('a is: ' + this.a)
+            }
+        })
+    </script>
+</body>
+</html>

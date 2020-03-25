@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Template</title>
+</head>
+<body>
+    <div id="app">
+        <span>Message: {{ msg }}</span><br>
+        <span v-once>这个将不会改变: {{ msg }}</span><br>
+        <span>number =  {{ number }}</span><br>
+        <span>number + 1 = {{ number + 1 }}</span><br>
+        <span>ok? {{ ok ? 'YES' : 'NO' }}</span>
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                msg: 'message',
+                number: 1,
+                ok: '',
+                rawHtml: '<span style="color: red">This should be red.</span>'
+            }
+        })
+    </script>
+</body>
+</html>
