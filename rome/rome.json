@@ -1,0 +1,12 @@
+{
+  "version": "^0.0.52",
+  "lint": {
+    "enabled": true
+  },
+  "format": {
+    "enabled": true
+  },
+  "tests": {
+    "enabled": true
+  }
+}
