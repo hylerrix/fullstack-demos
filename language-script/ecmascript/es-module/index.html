@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- module 文件自动加上了 defer 属性 -->
+  <script type="module" src="./demo.js">
+    console.log('script 标签里的 hello：', hello) // 没用
+  </script>
+  <!-- 再加载多次相同模块，并没有用处 -->
+  <script type="module" src="./demo.js"></script>
+  <script type="module" src="./demo.js"></script>
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import * as hello from './hello.js'
+
+    console.log('import.meta', import.meta)
+
+    console.log('index.html 直接导入的 hello：', hello)
+  </script>
+  <script src="index.js">
+    // 可以直接本地打开，无需开启服务器来避免跨域
+  </script>
+</body>
+</html>
