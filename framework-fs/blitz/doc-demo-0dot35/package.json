@@ -1,0 +1,49 @@
+{
+  "name": "doc-demo-0dot35",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "blitz dev",
+    "build": "blitz build",
+    "start": "blitz start",
+    "studio": "blitz prisma studio",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepare": "husky install"
+  },
+  "prisma": {
+    "schema": "db/schema.prisma"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@prisma/client": "~2.20",
+    "@types/react": "17.x",
+    "@types/preview-email": "2.0.0",
+    "blitz": "0.35.0",
+    "eslint": "7.x",
+    "husky": "6.x",
+    "lint-staged": "10.x",
+    "prettier": "2.x",
+    "pretty-quick": "3.x",
+    "preview-email": "3.x",
+    "prettier-plugin-prisma": "0.7.x",
+    "prisma": "~2.20",
+    "react": "0.0.0-experimental-6a589ad71",
+    "react-dom": "0.0.0-experimental-6a589ad71",
+    "react-error-boundary": "3.x",
+    "typescript": "~4.2",
+    "zod": "1.x",
+    "final-form": "4.x",
+    "react-final-form": "6.x"
+  },
+  "private": true,
+  "devDependencies": {}
+}
