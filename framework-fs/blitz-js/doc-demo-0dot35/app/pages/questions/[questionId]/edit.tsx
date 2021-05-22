@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { Head, Link, useRouter, useQuery, useMutation, useParam, BlitzPage, Routes } from "blitz"
-import Layout from "app/core/layouts/Layout"
+import Layout from "app/components/layouts/Layout"
 import getQuestion from "app/models/questions/queries/getQuestion"
 import updateQuestion from "app/models/questions/mutations/updateQuestion"
 import { QuestionForm, FORM_ERROR } from "app/models/questions/components/QuestionForm"

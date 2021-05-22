@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { Head, Link, useRouter, useQuery, useParam, BlitzPage, useMutation, Routes } from "blitz"
-import Layout from "app/core/layouts/Layout"
+import Layout from "app/components/layouts/Layout"
 import getQuestion from "app/models/questions/queries/getQuestion"
 import deleteQuestion from "app/models/questions/mutations/deleteQuestion"
 import updateChoice from "app/models/choices/mutations/updateChoice"
@@ -9,12 +9,12 @@ export const Question = () => {
   const router = useRouter()
   const questionId = useParam("questionId", "number")
   const [deleteQuestionMutation] = useMutation(deleteQuestion)
-  const [question, {refetch}] = useQuery(getQuestion, {id: questionId})
+  const [question, { refetch }] = useQuery(getQuestion, { id: questionId })
   const [updateChoiceMutation] = useMutation(updateChoice)
 
   const handleVote = async (id: number) => {
     try {
-      await updateChoiceMutation({id})
+      await updateChoiceMutation({ id })
       refetch()
     } catch (error) {
       alert("Error updating choice " + JSON.stringify(error, null, 2))

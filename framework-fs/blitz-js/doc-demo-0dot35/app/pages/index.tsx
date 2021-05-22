@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import { Link, BlitzPage, useMutation, Routes, getSession, useSession, getAntiCSRFToken } from "blitz"
-import Layout from "app/core/layouts/Layout"
-import { useCurrentUser } from "app/core/hooks/useCurrentUser"
+import Layout from "app/components/Layout"
+import { useCurrentUser } from "app/hooks/useCurrentUser"
 import logout from "app/models/auth/mutations/logout"
 
 /*

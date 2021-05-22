@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { Head, Link, usePaginatedQuery, useRouter, BlitzPage, Routes } from "blitz"
-import Layout from "app/core/layouts/Layout"
+import Layout from "app/components/layouts/Layout"
 import getQuestions from "app/models/questions/queries/getQuestions"
 
 const ITEMS_PER_PAGE = 100

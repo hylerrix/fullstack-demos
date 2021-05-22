@@ -1,5 +1,5 @@
 import { Link, useRouter, useMutation, BlitzPage, Routes } from "blitz"
-import Layout from "app/core/layouts/Layout"
+import Layout from "app/components/layouts/Layout"
 import createQuestion from "app/models/questions/mutations/createQuestion"
 import { QuestionForm, FORM_ERROR } from "app/models/questions/components/QuestionForm"
 
@@ -17,7 +17,7 @@ const NewQuestionPage: BlitzPage = () => {
         //  - Tip: extract mutation's schema into a shared `validations.ts` file and
         //         then import and use it here
         // schema={CreateQuestion}
-        initialValues={{choices: []}}
+        initialValues={{ choices: [] }}
         onSubmit={async (values) => {
           try {
             const question = await createQuestionMutation(values)
