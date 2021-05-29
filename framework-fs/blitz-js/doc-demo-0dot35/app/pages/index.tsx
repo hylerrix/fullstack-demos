@@ -1,5 +1,5 @@
-import { Suspense } from "react"
-import { Link, BlitzPage, useMutation, Routes, getSession, useSession, getAntiCSRFToken } from "blitz"
+import { Suspense, useEffect } from "react"
+import { Link, BlitzPage, useMutation, Routes, getSession, useSession, getAntiCSRFToken, useRouter } from "blitz"
 import Layout from "app/components/Layout"
 import { useCurrentUser } from "app/hooks/useCurrentUser"
 import logout from "app/models/auth/mutations/logout"
@@ -62,6 +62,16 @@ export async function getServerSideProps({ req, res }) {
 const Home: BlitzPage = ({ sessionPublicDataFromServerSide }) => {
   const session = useSession({ suspense: false })
   const antiCSRFToken = getAntiCSRFToken()
+  const router = useRouter()
+
+  useEffect(() => {
+    // always do navigations after the first render
+    router.push("/?counter=10", undefined, { shallow: true })
+  }, [])
+
+  useEffect(() => {
+    console.log('the counter changed!')
+  }, [router.query.counter])
 
   return (
     <div>
@@ -69,7 +79,9 @@ const Home: BlitzPage = ({ sessionPublicDataFromServerSide }) => {
 
       <p>get session from client - useSession: {JSON.stringify(session)}</p>
       <p>get session from server side - getServerSideProps: {JSON.stringify(sessionPublicDataFromServerSide)}</p>
-      <p>antiCSRFToken: {antiCSRFToken} </p>
+      <hr />
+      <p>antiCSRFToken from getAntiCSRFToken: {antiCSRFToken} </p>
+      <hr />
 
       <Suspense fallback="Loading...">
         <UserInfo />

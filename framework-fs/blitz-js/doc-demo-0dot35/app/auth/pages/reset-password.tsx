@@ -1,5 +1,5 @@
 import { BlitzPage, useRouterQuery, Link, useMutation, Routes } from "blitz"
-import Layout from "app/components/layouts/Layout"
+import Layout from "app/components/Layout"
 import { LabeledTextField } from "app/components/LabeledTextField"
 import { Form, FORM_ERROR } from "app/components/Form"
 import { ResetPassword } from "app/models/auth/validations"

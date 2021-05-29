@@ -1,5 +1,5 @@
 import { useRouter, BlitzPage, Routes } from "blitz"
-import Layout from "app/components/layouts/Layout"
+import Layout from "app/components/Layout"
 import { SignupForm } from "app/models/auth/components/SignupForm"
 
 const SignupPage: BlitzPage = () => {

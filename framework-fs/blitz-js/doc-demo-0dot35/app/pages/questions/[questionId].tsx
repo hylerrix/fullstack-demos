@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { Head, Link, useRouter, useQuery, useParam, BlitzPage, useMutation, Routes } from "blitz"
-import Layout from "app/components/layouts/Layout"
+import Layout from "app/components/Layout"
 import getQuestion from "app/models/questions/queries/getQuestion"
 import deleteQuestion from "app/models/questions/mutations/deleteQuestion"
 import updateChoice from "app/models/choices/mutations/updateChoice"
