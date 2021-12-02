@@ -1,5 +1,36 @@
-# 训练仓库
+# Demos All in One
 
-目前合并了所有从 2016~2020 曾经开辟过的训练仓库；未来持续更新中。
+## Multiple Programming Directions to Learn
 
-同时，也能指导更多人建立自己大而全的 demos 仓库，为自己凝聚技术学习过程中产生的所有训练代码。
+| Prefix (1st) | Prefix (2nd)        | Prefix (3rd)             | Remark                 |
+|--------------|---------------------|--------------------------|------------------------|
+| technology   | technology-basic    |                          |                        |
+|              | technology-system   |                          |                        |
+| language     | language-markup     |                          |                        |
+|              | language-static     |                          | Rust, C*, Go, Java...  |
+|              | language-script     |                          | JS, TS, PHP, Python... |
+| platform     | platform-runtime    | platform-runtime-browser |                        |
+|              |                     | platform-runtime-node    |                        |
+|              |                     | platform-runtime-deno    |                        |
+|              | platform-system     |                          | linux                  |
+| framework    | framework-toolchain | framework-toolchain-node |                        |
+|              |                     | framework-toolchain-deno |                        |
+|              | framework-fe        | framework-fe-node        |                        |
+|              |                     | framework-fe-deno        |                        |
+|              | framework-be        | framework-be-node        |                        |
+|              |                     | framework-be-deno        |                        |
+|              | framework-fs        | framework-fe-node        |                        |
+|              |                     | framework-fe-deno        |                        |
+|              | framework-mobile    | framework-mobile-node    |                        |
+|              | framework-desktop   | framework-desktop-node   |                        |
+
+## Two Ways to Train
+
+There are two ways to train my demo in this ultimate repo:
+
+* All in `main` branch: collect all my 2016~2021 demos, but is under migration to multiple branches now.
+* Split into multiple branch: start from 2021-1201.
+
+## Notice
+
+Copyright @hylerrix, 2016
