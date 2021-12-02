@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		Getting all the CSS styles
+		of an element using jQuery
+	</title>
+</head>
+
+<body style="text-align:center;">
+
+	<h1>GeeksForGeeks</h1>
+
+	<p id="GFG_UP"></p>
+
+	<button onclick="GFG_Fun();">
+		Click Here
+	</button>
+
+	<p id="GFG_DOWN"></p>
+
+	<script>
+		var up = document.getElementById('GFG_UP');
+		var down = document.getElementById('GFG_DOWN');
+		
+		up.innerHTML = "Click on the buttob "
+			+ "to get the all CSS styles "
+			+ "associated with the element.";
+		function GFG_Fun() {
+			var ar = document.defaultView
+				.getComputedStyle(document.body, null);
+      console.log('ar', ar)
+			var str = "";
+			for (var key in ar) {
+				str = str + key + ': ' + ar[key] + "<br />";
+			}
+      console.log('str', str)
+			down.innerHTML = str;
+		}
+	</script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE HTML>
+<html>
+  
+<head>
+    <title>
+        Getting all the CSS styles 
+        of an element using jQuery
+    </title>
+      
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+</head>
+
+<body style="text-align:center;">
+  
+    <h1>GeeksForGeeks</h1>
+  
+    <p id="GFG_UP"></p>
+  
+    <button onclick="GFG_Fun();">
+        Click Here
+    </button>
+      
+    <p id="GFG_DOWN"></p>
+  
+    <script>
+        var up = document.getElementById('GFG_UP');
+        var down = document.getElementById('GFG_DOWN');
+        up.innerHTML = "Click on the buttob to get"
+                + " the all CSS styles associated "
+                + "with the element.";
+  
+        (function ($) {
+            $.fn.cssSpecific = function (str) {
+                var ob = {};
+                if (this.length) {
+                    var css = str.split(', ');
+                    var prms = [];
+                    for (var i = 0, ii = css.length; 
+                                    i < ii; i++) {
+                        prms = css[i].split(':');
+  
+                        ob[$.trim(prms[0])] = $(this)
+                        .css($.trim(prms[1] || prms[0]));
+                    }
+                }
+                return ob;
+            };
+        })(jQuery);
+        function GFG_Fun() {
+            var styles = $('#GFG_UP').cssSpecific(
+'color, backgroundColor, opacity, height, lineHeight:height');
+            down.innerHTML = JSON.stringify(styles);
+        }
+    </script>
+</body>
+  
+</html> -->

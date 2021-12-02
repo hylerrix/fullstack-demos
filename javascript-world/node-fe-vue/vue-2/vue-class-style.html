@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Class Style</title>
+</head>
+<body>
+    <!-- 给 v-bind:class 一个对象，以动态地切换 class -->
+    <!-- 语法表示 active 这个 class 存在与否将取决于数据属性 isActive 的 truthiness。 -->
+    <div id="app" class="static"
+        v-bind:class="{ active: isActive, 'text-danger': hasError }">
+    </div>
+    <div id="app2" v-bind:class="[activeClass, errorClass]"></div>
+    <div id="app3" v-bind:class="[{ active: isActive }, errorClass]"></div>
+    <div id="app4">
+        <my-component class="baz boo"></my-component>
+    </div>
+    <p v-show="ok">Hello!</p>
+    <div id="app5" v-bind:style="styleObject"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                isActive: true,
+                hasError: false
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                activeClass: 'active',
+                errorClass: 'text-danger'
+            }
+        })
+
+        var app3 = new Vue({
+            el: '#app3',
+            data: {
+                isActive: 'true',
+                errorClass: 'text-danger'
+            }
+        })
+
+        Vue.component('my-component', {
+            template: '<p class="foo bar">Hi</p>'
+        })
+        
+        var app4 = new Vue({
+            el: '#app4'
+        })
+        
+        var app5 = new Vue({
+            el: '#app5',
+            data: {
+                styleObject: {
+                    color: 'red',
+                    fontSize: '13px'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

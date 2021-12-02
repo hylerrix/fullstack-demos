@@ -12,7 +12,8 @@
 |              | platform-system     |                          | Linux, Windows, Apple  |
 | application  | application-node    |                          | Mixin                  |
 | api          |                     |                          |                        |
-| cloud        |                     |                          |                        |
+| cloud        | cloud-platform      |                          |                        |
+|              | cloud-deploy        |                          |                        |
 | framework    | framework-toolchain | framework-toolchain-node |                        |
 |              |                     | framework-toolchain-deno |                        |
 |              | framework-style     | framework-style-node     |                        |
