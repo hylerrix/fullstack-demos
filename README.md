@@ -5,22 +5,22 @@
 | Prefix (1st) | Prefix (2nd)        | Prefix (3rd)             | Remark                 |
 |--------------|---------------------|--------------------------|------------------------|
 | technology   | technology-basic    |                          |                        |
-|              | technology-system   |                          |                        |
 | language     | language-markup     |                          |                        |
 |              | language-static     |                          | Rust, C*, Go, Java...  |
 |              | language-script     |                          | JS, TS, PHP, Python... |
-| platform     | platform-runtime    | platform-runtime-browser |                        |
-|              |                     | platform-runtime-node    |                        |
-|              |                     | platform-runtime-deno    |                        |
-|              | platform-system     |                          | linux                  |
+| platform     | platform-runtime    |                          | Node, Deno, Browser    |
+|              | platform-system     |                          | Linux, Windows, Apple  |
+| application  | application-node    |                          | Mixin                  |
+| api          |                     |                          |                        |
+| cloud        |                     |                          |                        |
 | framework    | framework-toolchain | framework-toolchain-node |                        |
 |              |                     | framework-toolchain-deno |                        |
+|              | framework-style     | framework-style-node     |                        |
+|              |                     | framework-style-deno     |                        |
 |              | framework-fe        | framework-fe-node        |                        |
 |              |                     | framework-fe-deno        |                        |
 |              | framework-be        | framework-be-node        |                        |
 |              |                     | framework-be-deno        |                        |
-|              | framework-fs        | framework-fe-node        |                        |
-|              |                     | framework-fe-deno        |                        |
 |              | framework-mobile    | framework-mobile-node    |                        |
 |              | framework-desktop   | framework-desktop-node   |                        |
 
@@ -33,4 +33,4 @@ There are two ways to train my demo in this ultimate repo:
 
 ## Notice
 
-Copyright @hylerrix, 2016
+Copyright @hylerrix, from 2016 to now
